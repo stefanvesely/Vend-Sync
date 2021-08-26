@@ -29,84 +29,70 @@ namespace Vend_Sync
         /// </summary>
         private void InitializeComponent()
         {
-            this.brnAddNew = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.btnSendData = new System.Windows.Forms.Button();
-            this.btnRetrieveData = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.tbPCName = new System.Windows.Forms.TextBox();
+            this.btnPurge = new System.Windows.Forms.Button();
+            this.btnFullUpload = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // brnAddNew
-            // 
-            this.brnAddNew.Location = new System.Drawing.Point(250, 10);
-            this.brnAddNew.Name = "brnAddNew";
-            this.brnAddNew.Size = new System.Drawing.Size(75, 23);
-            this.brnAddNew.TabIndex = 0;
-            this.brnAddNew.Text = "Add New";
-            this.brnAddNew.UseVisualStyleBackColor = true;
-            this.brnAddNew.Click += new System.EventHandler(this.brnAddNew_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(12, 12);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(232, 21);
-            this.comboBox1.TabIndex = 1;
-            // 
-            // btnSendData
-            // 
-            this.btnSendData.Location = new System.Drawing.Point(12, 126);
-            this.btnSendData.Name = "btnSendData";
-            this.btnSendData.Size = new System.Drawing.Size(202, 26);
-            this.btnSendData.TabIndex = 2;
-            this.btnSendData.Text = "Send";
-            this.btnSendData.UseVisualStyleBackColor = true;
-            this.btnSendData.Click += new System.EventHandler(this.btnSendData_Click);
-            // 
-            // btnRetrieveData
-            // 
-            this.btnRetrieveData.Location = new System.Drawing.Point(12, 95);
-            this.btnRetrieveData.Name = "btnRetrieveData";
-            this.btnRetrieveData.Size = new System.Drawing.Size(202, 25);
-            this.btnRetrieveData.TabIndex = 3;
-            this.btnRetrieveData.Text = "Get";
-            this.btnRetrieveData.UseVisualStyleBackColor = true;
-            this.btnRetrieveData.Click += new System.EventHandler(this.btnRetrieveData_Click);
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Location = new System.Drawing.Point(220, 126);
+            this.btnRefresh.Location = new System.Drawing.Point(220, 12);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(180, 25);
             this.btnRefresh.TabIndex = 4;
-            this.btnRefresh.Text = "Get All Tables";
+            this.btnRefresh.Text = "Reload From Server";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // tbPCName
+            // 
+            this.tbPCName.Enabled = false;
+            this.tbPCName.Location = new System.Drawing.Point(13, 76);
+            this.tbPCName.Name = "tbPCName";
+            this.tbPCName.Size = new System.Drawing.Size(387, 20);
+            this.tbPCName.TabIndex = 6;
+            // 
+            // btnPurge
+            // 
+            this.btnPurge.Location = new System.Drawing.Point(220, 43);
+            this.btnPurge.Name = "btnPurge";
+            this.btnPurge.Size = new System.Drawing.Size(180, 25);
+            this.btnPurge.TabIndex = 7;
+            this.btnPurge.Text = "Purge Logs";
+            this.btnPurge.UseVisualStyleBackColor = true;
+            // 
+            // btnFullUpload
+            // 
+            this.btnFullUpload.Location = new System.Drawing.Point(13, 43);
+            this.btnFullUpload.Name = "btnFullUpload";
+            this.btnFullUpload.Size = new System.Drawing.Size(180, 25);
+            this.btnFullUpload.TabIndex = 8;
+            this.btnFullUpload.Text = "Full Sync Local";
+            this.btnFullUpload.UseVisualStyleBackColor = true;
+            this.btnFullUpload.Click += new System.EventHandler(this.btnFullUpload_Click);
             // 
             // frmSyncServer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(408, 210);
+            this.ClientSize = new System.Drawing.Size(408, 115);
+            this.Controls.Add(this.btnFullUpload);
+            this.Controls.Add(this.btnPurge);
+            this.Controls.Add(this.tbPCName);
             this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.btnRetrieveData);
-            this.Controls.Add(this.btnSendData);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.brnAddNew);
             this.Name = "frmSyncServer";
             this.Text = "Sync";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button brnAddNew;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button btnSendData;
-        private System.Windows.Forms.Button btnRetrieveData;
         private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.TextBox tbPCName;
+        private System.Windows.Forms.Button btnPurge;
+        private System.Windows.Forms.Button btnFullUpload;
     }
 }
 
